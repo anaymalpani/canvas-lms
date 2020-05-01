@@ -7,7 +7,8 @@
   },
   "dependencies": {
     "brandable_css": "0.0.67",
-    "instructure-ui": "0.13.3"
+    "instructure-ui": "0.13.3",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "babel-cli": "^6.10.1",
@@ -71,6 +72,9 @@
     "webpack-test": "NODE_ENV=test webpack --progress --color --config webpack.test.config.babel.js",
     "webpack-test-ember": "NODE_ENV=test WEBPACK_TEST_BUNDLE=ember webpack --progress --color --config webpack.test.config.babel.js",
     "webpack-test-watch": "NODE_ENV=test webpack --progress --color --watch --config webpack.test.config.babel.js",
-    "webpack-production": "NODE_ENV=production webpack --progress --color --config webpack.production.config.babel.js"
-  }
+    "webpack-production": "NODE_ENV=production webpack --progress --color --config webpack.production.config.babel.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
